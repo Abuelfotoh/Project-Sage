@@ -6,21 +6,43 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "tsx scripts/seed-companies.ts",
+    "db:backfill": "tsx scripts/backfill-prices.ts",
+    "db:financials": "tsx scripts/sync-financials.ts",
+    "setup": "npm run db:migrate && npm run db:seed",
+    "test": "vitest run"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.82.0",
+    "better-sqlite3": "^12.8.0",
+    "cheerio": "^1.2.0",
+    "drizzle-orm": "^0.45.2",
     "next": "16.2.2",
+    "next-intl": "^4.9.0",
+    "node-cron": "^4.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "yahoo-finance2": "^3.14.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@tanstack/react-table": "^8.21.3",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
+    "@types/node-cron": "^3.0.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
+    "lightweight-charts": "^5.1.0",
+    "recharts": "^3.8.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vitest": "^4.1.2"
   }
 }

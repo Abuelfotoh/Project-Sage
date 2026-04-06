@@ -1,0 +1,86 @@
+{
+  "common": {
+    "appName": "Project Sage",
+    "tagline": "Tadawul Value Investing Intelligence",
+    "search": "Search by ticker or company name...",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "refresh": "Refresh",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "back": "Back",
+    "currency": "SAR"
+  },
+  "nav": {
+    "screener": "Screener",
+    "watchlist": "Watchlist",
+    "analysis": "AI Analysis",
+    "settings": "Settings"
+  },
+  "screener": {
+    "title": "Stock Screener",
+    "subtitle": "All Tadawul-listed companies ranked by Sage Score",
+    "symbol": "Symbol",
+    "company": "Company",
+    "sector": "Sector",
+    "price": "Price",
+    "sageScore": "Sage Score",
+    "grahamScore": "Graham",
+    "buffettScore": "Buffett",
+    "dcfScore": "DCF",
+    "pe": "P/E",
+    "pb": "P/B",
+    "roe": "ROE",
+    "marginOfSafety": "Margin of Safety",
+    "signal": "Signal",
+    "filterBySector": "Filter by sector",
+    "allSectors": "All Sectors",
+    "minScore": "Min Score",
+    "signals": {
+      "strong_buy": "Strong Buy",
+      "buy": "Buy",
+      "watch": "Watch",
+      "hold": "Hold",
+      "avoid": "Avoid"
+    }
+  },
+  "stock": {
+    "overview": "Overview",
+    "financials": "Financials",
+    "screening": "Screening",
+    "analysis": "AI Analysis",
+    "incomeStatement": "Income Statement",
+    "balanceSheet": "Balance Sheet",
+    "cashFlow": "Cash Flow",
+    "priceChart": "Price Chart",
+    "peers": "Peer Comparison",
+    "intrinsicValue": "Intrinsic Value",
+    "currentPrice": "Current Price",
+    "fairValue": "Fair Value",
+    "bargainValue": "Bargain Value",
+    "marketCap": "Market Cap",
+    "volume": "Volume",
+    "dayChange": "Day Change",
+    "yearRange": "52-Week Range"
+  },
+  "watchlist": {
+    "title": "Watchlist",
+    "subtitle": "Track your target stocks",
+    "addToWatchlist": "Add to Watchlist",
+    "removeFromWatchlist": "Remove",
+    "targetPrice": "Target Price",
+    "notes": "Notes",
+    "alertEnabled": "Alert Enabled",
+    "empty": "Your watchlist is empty. Add stocks from the screener."
+  },
+  "ai": {
+    "generateMemo": "Generate Investment Memo",
+    "analyzeStatements": "Analyze Financial Statements",
+    "buffettLens": "Buffett Letter Lens",
+    "generating": "Generating analysis with Claude AI...",
+    "cached": "Cached result",
+    "costWarning": "This will use the Claude API and may incur costs."
+  },
+  "disclaimer": "DISCLAIMER: This tool is for personal educational and research purposes only. It does not constitute investment advice. All investment decisions are the sole responsibility of the user."
+}
