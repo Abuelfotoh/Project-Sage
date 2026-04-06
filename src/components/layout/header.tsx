@@ -34,6 +34,12 @@ export function Header({ locale }: { locale: string }) {
             >
               {t("nav.watchlist")}
             </Link>
+            <Link
+              href={`/${locale}/sync`}
+              className="text-sm font-medium text-gray-600 hover:text-emerald-700 transition-colors"
+            >
+              Sync Status
+            </Link>
             <LocaleSwitcher currentLocale={locale} />
           </nav>
         </div>
