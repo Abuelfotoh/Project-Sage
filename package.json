@@ -11,6 +11,7 @@
     "db:seed": "tsx scripts/seed-companies.ts",
     "db:backfill": "tsx scripts/backfill-prices.ts",
     "db:financials": "tsx scripts/sync-financials.ts",
+    "db:discover": "tsx scripts/discover-all-tickers.ts",
     "setup": "npm run db:migrate && npm run db:seed",
     "test": "vitest run"
   },

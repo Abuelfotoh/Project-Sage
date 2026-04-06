@@ -11,6 +11,7 @@ interface StockRow {
   nameAr: string | null;
   sectorEn: string | null;
   sectorAr: string | null;
+  market: string | null;
   price: number | null;
   sageScore: number | null;
   grahamScore: number | null;
@@ -36,6 +37,7 @@ export function ScreenerTable({
   const tc = useTranslations("common");
   const [search, setSearch] = useState("");
   const [sectorFilter, setSectorFilter] = useState<string>("all");
+  const [marketFilter, setMarketFilter] = useState<string>("all");
   const [minScore, setMinScore] = useState(0);
   const [sortField, setSortField] = useState<SortField>("sageScore");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
@@ -63,6 +65,11 @@ export function ScreenerTable({
       );
     }
 
+    // Market filter
+    if (marketFilter !== "all") {
+      result = result.filter((r) => r.market === marketFilter);
+    }
+
     // Sector filter
     if (sectorFilter !== "all") {
       result = result.filter(
@@ -83,7 +90,7 @@ export function ScreenerTable({
     });
 
     return result;
-  }, [data, search, sectorFilter, minScore, sortField, sortDir, isAr]);
+  }, [data, search, sectorFilter, marketFilter, minScore, sortField, sortDir, isAr]);
 
   function toggleSort(field: SortField) {
     if (sortField === field) {
@@ -124,6 +131,17 @@ export function ScreenerTable({
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 min-w-[200px] px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none"
         />
+        <select
+          value={marketFilter}
+          onChange={(e) => setMarketFilter(e.target.value)}
+          title="Filter by market"
+          className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white"
+        >
+          <option value="all">All Markets</option>
+          <option value="main">Main Market</option>
+          <option value="nomu">Nomu</option>
+          <option value="reit">REITs</option>
+        </select>
         <select
           value={sectorFilter}
           onChange={(e) => setSectorFilter(e.target.value)}

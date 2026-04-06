@@ -6,7 +6,7 @@ export const CompanySchema = z.object({
   nameAr: z.string().optional(),
   sectorEn: z.string().optional(),
   sectorAr: z.string().optional(),
-  market: z.enum(["main", "nomu"]).default("main"),
+  market: z.enum(["main", "nomu", "reit"]).default("main"),
 });
 
 export type CompanyData = z.infer<typeof CompanySchema>;

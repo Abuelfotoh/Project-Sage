@@ -141,6 +141,7 @@ function getScreenerData() {
       nameAr: company.nameAr,
       sectorEn: company.sectorEn,
       sectorAr: company.sectorAr,
+      market: company.market,
       price,
       sageScore: composite?.score ? Math.round(composite.score) : null,
       grahamScore: grahamResult?.score ? Math.round(grahamResult.score) : null,
